@@ -14,6 +14,23 @@ CLIENT is the system you are using to access the remote system.
 
 -->command to connect<--
 ssh {user}@{host}
+eg: ssh root@ipaddress
+
+How to connect ssh to github?
+
+SSH allows us to connect us to our office laptop from home.
+
+sudo apt-get is a command to install things in ubuntu cmd
+
+Symmetrical Encyrption -  same key to encrypt and decrypt  (SSH shared key)
+Assymmetrical Encyrption - public and private keys
+
+Passwords or SSH
+
+
+
+
+
 
 
 

@@ -92,6 +92,9 @@ SPAs and PWAs with framework
 
 Lighthouse: For Auditing PWA in Google Chrome
 
+Web App Manifest Allows us to install the web app in the mobile.
+manifest.json in the root folder has properties for the app
+
 
 
 

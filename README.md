@@ -96,6 +96,15 @@ Web App Manifest Allows us to install the web app in the mobile.
 manifest.json in the root folder has properties for the app
 
 
+Criteria for installable PWA
+Has a web app manifest file
+Has a service worker registered on your site
+Is served over HTTPS ( a requirement for service workers)
+Is visited atleast twice in 5 minutes
+
+
+
+
 
 
 

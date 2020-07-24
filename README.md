@@ -103,6 +103,17 @@ Is served over HTTPS ( a requirement for service workers)
 Is visited atleast twice in 5 minutes
 
 
+SERVICE WORKERS - 
+Runs on a seperate javascript thread because they work in the background 
+decoupled from HTML pages, manages all pages of a given scope.
+It lives on even after the page is closed.
+They are good to reacting to events by HTML or javascript. That is what they do.
+They listen to specific events.
+
+EVENTS -> FETCH.PUSH_NOTIFICATIONS.NOTIFICATION_INTERACTION.BACKGROUND_SYNC.SERVICE_WORKER_LIFECYCLE
+
+Service workers are used in push notifications because it works even if we close our browser.
+
 
 
 

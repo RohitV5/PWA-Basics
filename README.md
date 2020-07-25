@@ -115,6 +115,10 @@ EVENTS -> FETCH.PUSH_NOTIFICATIONS.NOTIFICATION_INTERACTION.BACKGROUND_SYNC.SERV
 Service workers are used in push notifications because it works even if we close our browser.
 
 
+Service Worker Life 
+Register as a background service -> Installation(Refreshes if changed) -> Activation -> Idle -> Fetch-> Terminated
+
+
 
 
 

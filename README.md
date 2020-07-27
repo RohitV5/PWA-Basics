@@ -119,6 +119,13 @@ Service Worker Life
 Register as a background service -> Installation(Refreshes if changed) -> Activation -> Idle -> Fetch-> Terminated
 
 
+For Browser Support
+Isserviceworkerready.com
+
+start http-server -c-l  
+-c --> flag browser cache off for development purpoer because we make code changes in development
+based on where service worker file is located it will control all child folders. so bettwer keep it in root folder
+
 
 
 

@@ -158,7 +158,7 @@ In Caching we have to add in the cache and retreive from the cache.
 
 AddAll allows us to cache all in the array.
 
-Change the cache name for versioning.
+Change the cache name for versioning. and remove old cache after activation of new cache.
 
 
 

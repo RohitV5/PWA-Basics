@@ -154,6 +154,10 @@ Cache the APP SHELL eg. the footer , header , sidebar.
 
 Run the application using localhost unless you are service over HTTPS otherwise serviceWorker will not available in navigator.
 
+In Caching we have to add in the cache and retreive from the cache.
+
+AddAll allows us to cache all in the array.
+
 
 
 

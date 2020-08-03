@@ -119,7 +119,7 @@ Service Worker Life
 Register as a background service -> Installation(Refreshes if changed) -> Activation -> Idle -> Fetch-> Terminated
 
 
-For Browser Support
+For Browser Support Check of PWA
 Isserviceworkerready.com
 
 start http-server -c-l  
@@ -143,7 +143,19 @@ Mode: 'no-cors' allows to get rid of this error but still we cant access the dat
 
 Service workers use Fetch and not AJAX.
 
-Service workers relies heavily on PromiseAPI and FetchAPI. Good understabnding of these is very important.
+Service workers relies heavily on PromiseAPI and FetchAPI. Good understanding of these is very important.
+
+
+Feature 1 of PWA : Caching  -- For offline access or poor connection cases
+
+The Cache API store key value pairs of request and response so if no internet is available it will fetch from the Cache API
+
+Cache the APP SHELL eg. the footer , header , sidebar.
+
+Run the application using localhost unless you are service over HTTPS otherwise serviceWorker will not available in navigator.
+
+
+
 
 
 

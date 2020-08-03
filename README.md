@@ -127,6 +127,27 @@ start http-server -c-l
 based on where service worker file is located it will control all child folders. so bettwer keep it in root folder
 
 
+Installing Service Worker vs Activating Service Workers
+
+
+Fetch is triggered by the web application while install and activate arre triggered by the browser.
+
+
+Request Header is set by the client side and Response Header is set by the server side.
+
+
+If server is setting Access-Control-Allow-Origin to : localhost:8080, hen this data will be accessible by this origin on the browser.
+
+Mode: 'no-cors' allows to get rid of this error but still we cant access the data using javascript,
+
+
+Service workers use Fetch and not AJAX.
+
+Service workers relies heavily on PromiseAPI and FetchAPI. Good understabnding of these is very important.
+
+
+
+
 
 
 

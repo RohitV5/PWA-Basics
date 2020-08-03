@@ -1,3 +1,4 @@
+//  navigator is the browser. so this code will execute if service worker is available for the browser
 
 var deferredPrompt;
 
@@ -11,22 +12,22 @@ if ('serviceWorker' in navigator) {
     .then(function () {
       console.log('Service worker registered!');
     })
-    .catch(function(err) {
+    .catch(function (err) {
       console.log(err);
     });
 }
 
-window.addEventListener('beforeinstallprompt', function(event) {
+window.addEventListener('beforeinstallprompt', function (event) {
   console.log('beforeinstallprompt fired');
   event.preventDefault();
   deferredPrompt = event;
   return false;
 });
 
-var promise = new Promise(function(resolve, reject) {
-  setTimeout(function() {
+var promise = new Promise(function (resolve, reject) {
+  setTimeout(function () {
     //resolve('This is executed once the timer is done!');
-    reject({code: 500, message: 'An error occurred!'});
+    reject({ code: 500, message: 'An error occurred!' });
     //console.log('This is executed once the timer is done!');
   }, 3000);
 });
@@ -35,25 +36,25 @@ var xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://httpbin.org/ip');
 xhr.responseType = 'json';
 
-xhr.onload = function() {
+xhr.onload = function () {
   console.log(xhr.response);
 };
 
-xhr.onerror = function() {
+xhr.onerror = function () {
   console.log('Error!');
 };
 
 xhr.send();
 
 fetch('https://httpbin.org/ip')
-  .then(function(response) {
+  .then(function (response) {
     console.log(response);
     return response.json();
   })
-  .then(function(data) {
+  .then(function (data) {
     console.log(data);
   })
-  .catch(function(err) {
+  .catch(function (err) {
     console.log(err);
   });
 
@@ -64,16 +65,16 @@ fetch('https://httpbin.org/post', {
     'Accept': 'application/json'
   },
   mode: 'cors',
-  body: JSON.stringify({message: 'Does this work?'})
+  body: JSON.stringify({ message: 'Does this work?' })
 })
-  .then(function(response) {
+  .then(function (response) {
     console.log(response);
     return response.json();
   })
-  .then(function(data) {
+  .then(function (data) {
     console.log(data);
   })
-  .catch(function(err) {
+  .catch(function (err) {
     console.log(err);
   });
 
@@ -85,11 +86,11 @@ fetch('https://httpbin.org/post', {
 //   console.log(newText);
 // });
 
-promise.then(function(text) {
+promise.then(function (text) {
   return text;
-}).then(function(newText) {
+}).then(function (newText) {
   console.log(newText);
-}).catch(function(err) {
+}).catch(function (err) {
   console.log(err.code, err.message);
 });
 

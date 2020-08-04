@@ -164,6 +164,25 @@ On demand caching : Based on user clicks like save an article for future reading
 
 Default Fallback Page if Network goes away.
 
+Strategy 1: Cache with Network Fallback 
+
+Strategy 2: Cache Only
+
+Strategy 3: Network Only
+
+Strategy 4: Network with cache fallback. -> If no network then fetch from cache, fails is slow network
+
+Strategy 5: Cache then Network -> The page directly access cache but networks to get updated data
+
+
+
+Caching Dynamic Content with IndexedDB
+
+
+
+
+
+
 
 
 

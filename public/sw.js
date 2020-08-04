@@ -1,5 +1,7 @@
-var CACHE_STATIC_NAME = 'static-v3';
-var CACHE_DYNAMIC_NAME = 'dynamic-v3'
+var CACHE_STATIC_NAME = 'static-v5';
+var CACHE_DYNAMIC_NAME = 'dynamic-v5'
+
+//ADDING CACHE DURING INSTALLATION OF PWA
 self.addEventListener('install', function (event) {
   // console.log('[Service Worker] Installing Service Worker ...', event);
   event.waitUntil(
@@ -9,6 +11,7 @@ self.addEventListener('install', function (event) {
         cache.addAll([
           '/',
           '/index.html',
+          '/offline.html',
           '/src/js/app.js',
           '/src/js/feed.js',
           '/src/js/promise.js',
@@ -26,6 +29,8 @@ self.addEventListener('install', function (event) {
   )
 });
 
+
+//DELETING OLD CACHE DURING ACTIVATION OF NEW ONE
 self.addEventListener('activate', function (event) {
   // console.log('[Service Worker] Activating Service Worker ....', event);
   event.waitUntil(
@@ -42,6 +47,8 @@ self.addEventListener('activate', function (event) {
   return self.clients.claim();
 });
 
+
+// RETREIVING  CACHE DURING OFFLINE OR ADDING DYNAMIC CACHE
 self.addEventListener('fetch', function (event) {
   // console.log('[Service Worker] Fetching something ....', event);
   event.respondWith(
@@ -59,6 +66,10 @@ self.addEventListener('fetch', function (event) {
                 })
             })
             .catch(function (err) {
+              return caches.open(CACHE_STATIC_NAME)
+                .then(function (cache) {
+                  return cache.match('/offline.html')
+                })
 
             });
         }

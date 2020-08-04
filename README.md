@@ -160,6 +160,12 @@ AddAll allows us to cache all in the array.
 
 Change the cache name for versioning. and remove old cache after activation of new cache.
 
+On demand caching : Based on user clicks like save an article for future reading.
+
+Default Fallback Page if Network goes away.
+
+
+
 
 
 

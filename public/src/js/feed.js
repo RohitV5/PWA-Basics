@@ -8,7 +8,7 @@ function openCreatePostModal() {
   if (deferredPrompt) {
     deferredPrompt.prompt();
 
-    deferredPrompt.userChoice.then(function(choiceResult) {
+    deferredPrompt.userChoice.then(function (choiceResult) {
       console.log(choiceResult.outcome);
 
       if (choiceResult.outcome === 'dismissed') {
@@ -30,6 +30,10 @@ shareImageButton.addEventListener('click', openCreatePostModal);
 
 closeCreatePostModalButton.addEventListener('click', closeCreatePostModal);
 
+function onSaveButtonClicked(event) {
+  console.log("clciked")
+}
+
 function createCard() {
   var cardWrapper = document.createElement('div');
   cardWrapper.className = 'shared-moment-card mdl-card mdl-shadow--2dp';
@@ -47,15 +51,19 @@ function createCard() {
   cardSupportingText.className = 'mdl-card__supporting-text';
   cardSupportingText.textContent = 'In San Francisco';
   cardSupportingText.style.textAlign = 'center';
+  // var cardSavedButton = document.createElement('button');
+  // cardSavedButton.textContent = "Save";
+  // cardSavedButton.addEventListener('click', onSaveButtonClicked)
+  // cardSupportingText.appendChild(cardSavedButton);
   cardWrapper.appendChild(cardSupportingText);
   componentHandler.upgradeElement(cardWrapper);
   sharedMomentsArea.appendChild(cardWrapper);
 }
 
 fetch('https://httpbin.org/get')
-  .then(function(res) {
+  .then(function (res) {
     return res.json();
   })
-  .then(function(data) {
+  .then(function (data) {
     createCard();
   });

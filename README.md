@@ -178,6 +178,40 @@ Strategy 5: Cache then Network -> The page directly access cache but networks to
 
 Caching Dynamic Content with IndexedDB
 
+Dynamic json data is used to be cached in indexedb
+IndexDB is a transactional key value database in the browser.
+Can store files and blobs. Can be accessed asynchronously.
+
+
+Localstorage and session storage cannot be used in service worker because it is used synchronously.
+IndexDB can be used in SW because it can be accessed asynchronously.
+
+Background Sync
+Store User Data when offline and push once internet is available
+only available if  SyncManager API is available
+
+
+Push Notifications in PWA even when the phone is in pocket.
+1.Ask user for permission for push notifications
+2.Check for existing Subscriptions   subscriptions are browser + device combinations
+
+Note: Service Workers are not a requirement for push notifications wecan use javascript directly for it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
